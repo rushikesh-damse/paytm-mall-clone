@@ -11,6 +11,7 @@
     max-width: 100%;
     justify-content: space-evenly;
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .banner .banner__bigBanner{
@@ -27,15 +28,29 @@
 .smallBanner__img2{
     height:50%;
 }
-
 .smallBanner__img1{
     margin-bottom: 40px;
 }
-
 
 .imgsize{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+
+.flashproducts{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flashproducts .flashProduct{
+    max-width: 350px;
+    padding: 20px 20px;
+    border: 1px solid #e6542f;
+    margin : 12px 12px;
 }
