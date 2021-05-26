@@ -1,16 +1,18 @@
 import React from 'react'
 import  '../Styles/Product.css'
 const Product = ({title , image}) => {
+   const style = {
+       width: '150px'
+   }
+
     return (
-        <div className='categoryProduct'>
+        <div className='Product'>
             
-           <div className="categoryProduct__img">
-            <img  src={image}/>
-            <p>{title}</p>
+           <div className="product__catrgories">
+            <img style={style} className = "product__img" src={image}/>
+            <p className="product__text">{title}</p>
             </div>
-        
-            
-     </div>
+        </div>
     )
 }
 

@@ -1,0 +1,10 @@
+.Product{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product__img{
+    border-radius: 50%;
+}
+
