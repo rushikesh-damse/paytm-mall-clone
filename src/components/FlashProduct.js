@@ -1,9 +1,10 @@
 import React from 'react'
 import '../Styles/FlashProduct.css'
-
+import { useStateValue } from "../contextApi/StateProvider";
 
 function FlashProduct({id , title ,price, image , rating}) {
 
+  const [{} , dispatch] = useStateValue();
   const additems = () =>{
        dispatch({
         type : "Add_to_basket",

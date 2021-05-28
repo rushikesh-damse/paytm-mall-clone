@@ -6,7 +6,7 @@ import { useStateValue } from "../contextApi/StateProvider";
 
 
 const Header = () => {
-    const [{basket}] = useStateValue();
+    const [{basket} , dispatch] = useStateValue();
   return (
     <div className="header">
        <img className="logo" src={logo}alt={logo}/>
@@ -31,13 +31,8 @@ const Header = () => {
           </div>
           <div className="header__bag common">
             <ShoppingBasket className="shoppingbasket" className="color"/>
-             {/* {console.log(basket)} */}
-             <span>{basket.length}</span>
-             <span>items</span>
-              {/* {basket.length === 0 ? <p>No Items in the bag</p> : <p>2</p>} */}
-                {/* {console.log(basket)}
-               {basket.length ==0 ? <span>No Items in the bag</span> : <h1></h1> } */}
-             </div>
+             {basket.length === 0 ? <p>No Items in the bag</p> :<span>{basket.length}</span>}
+           </div>
           <div className="header__login common">
             <Mood className="color" />
             <span>Login/Signup</span>
