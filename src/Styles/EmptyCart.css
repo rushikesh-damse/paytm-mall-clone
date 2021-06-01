@@ -1,0 +1,38 @@
+.emptycart{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.emptycart__img{
+    margin-bottom: 14px;
+    object-fit:contain;
+}
+
+.emptycard__info1{
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom:2px;
+}
+
+.emptycard__info2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.emptycard__info3{
+    width:220px;
+     margin : 10px 20px;
+}
+
+.emptycard__info3 button{
+    width:100%;
+    border : 1px solid #ef4e28;
+    color: #ef4e28;
+    font-size: 18px;
+    border-radius:5px;
+    background-color :white;
+    padding: 15px 15px;
+}

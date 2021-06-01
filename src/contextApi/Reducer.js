@@ -3,25 +3,30 @@ export const initialState = {
     
   };
   
-  
- export  const reducer = (state, action) => {
-    console.log(action);
+export  const reducer = (state, action) => {
+    //console.log(action);
     switch (action.type) {
-      case "ADD_TO_BASKET":
+      case "Add_To_Basket":
         return {
           ...state,
+          basket : [...state.basket , action.items],
         };
     
   
-      case "REMOVE_FROM_BASKET":
+      case "Remove_From_Basket":
+        const id = action.id;
+        const newBasket = [...state.basket];
+        newBasket.splice(state.basket.findIndex(a => a.id ===id) , 1)
+
         return {
-          ...state,
-        
-        }
+         ...state,
+          basket : newBasket,
+       };
 
         default :
-        return {state}
+        return {...state}
      }
 };
   
- 
+export const getTotal = (basket) => 
+  basket?.reduce((amount, item) => item.price + amount,0);

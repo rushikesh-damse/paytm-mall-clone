@@ -7,7 +7,7 @@ function FlashProduct({id , title ,price, image , rating}) {
   const [{} , dispatch] = useStateValue();
   const additems = () =>{
        dispatch({
-        type : "Add_to_basket",
+        type : "Add_To_Basket",
         items:{
           id :id,
           title :title,

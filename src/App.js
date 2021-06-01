@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from './components/Header'
+import Cart from './components/Cart'
 import ProductList from './components/ProductList'
 import './Styles/GlobalStyle.css'
 import {
-  BrowserRouter as Router,Switch, Route, Link} from "react-router-dom";
+  BrowserRouter as Router,Switch, Route} from "react-router-dom";
 
 
 const App = () => {
@@ -17,8 +18,8 @@ const App = () => {
         <h2>Payment</h2>
         </Route>
         <Route path="/cart">
-        <Header />
-        <h2>Shopping Cart</h2>
+        <Header/>
+        <Cart/>
         </Route>
         <Route path="/login">
         <h2>Login page</h2>
