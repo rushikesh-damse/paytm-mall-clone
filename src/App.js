@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header'
 import Cart from './components/Cart'
+import MyOrders from './components/MyOrders'
 import ProductList from './components/ProductList'
 import './Styles/GlobalStyle.css'
 import {
@@ -14,8 +15,9 @@ const App = () => {
        
       <Router>
         <Switch>
-        <Route path="/payment">
-        <h2>Payment</h2>
+        <Route path="/myorders">
+         <Header />
+         <MyOrders/>
         </Route>
         <Route path="/cart">
         <Header/>

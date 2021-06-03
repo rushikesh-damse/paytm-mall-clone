@@ -79,7 +79,7 @@ const style ={
                   id = "1"
                   title = "Apple iPhone 11 128 GB White(Without Earphone & Adapter"
                   image = {ApplePhone}
-                  price = { "₹ 59000"}
+                  price = { "₹59000"}
                   rating = "3.8"
                   />
                </div>
@@ -89,7 +89,7 @@ const style ={
                   id = "2"
                   title = "Philips BT1212/15 Beard & Hair Trimmer For Men (Green)"
                   image = {Trimmer}
-                  price = { "₹ 899"}
+                  price = { "₹899"}
                   rating = "4.1"
                   />
                </div>
@@ -99,7 +99,7 @@ const style ={
                   id = "3"
                   title = "PUMA Fabric Sports Shoes for men"
                   image = {Shoes}
-                  price = { "₹ 1719"}
+                  price = { "₹1719"}
                   rating = "3.6"
                   />
                </div>
@@ -109,7 +109,7 @@ const style ={
                   id = "4"
                   title = "Vedant Vastram Women's Silk Printed Lace Work Saree With Jaquard blouse piece (Dark blue Colour)"
                   image = {Saree}
-                  price = { "₹ 1079"}
+                  price = { "₹1079"}
                   rating = "2"
                   />
                </div>
@@ -119,7 +119,7 @@ const style ={
                   id = "5"
                   title = "boAt bassheads 100 BassHeads 100 In-Ear Wired Headphone ( Black )"
                   image = {HeadPhone}
-                  price = { "₹ 379"}
+                  price = { "₹379"}
                   rating = "4.1"
                   />
                </div>
@@ -129,7 +129,7 @@ const style ={
                   id = "6"
                   title = "EYEBOGLER Men Yellow Regular fit Cotton Round neck T-Shirt - Pack Of 1"
                   image = {Tshirt}
-                  price = { "₹ 499"}
+                  price = { "₹499"}
                   rating = "4"
                   />
                </div>

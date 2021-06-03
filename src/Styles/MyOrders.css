@@ -1,0 +1,168 @@
+.myorders{
+    width:95%;
+    margin: 0 auto;
+}
+
+.myorders__title{
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight:bold;
+    padding:15px;
+  
+}
+
+.myorders__header{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    background-color: rgb(247, 241, 218); 
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.myorders__header__left{
+    display: flex;
+    margin-left: 20px;
+    align-items:center;
+}
+
+.myorders__header__left > p{
+    margin-right: 20px;
+}
+
+.shoppingorders{
+    font-size:17px;
+    font-weight:bold;
+    color: #ef4e28;
+    padding:2px;
+    border-bottom: 2px solid #ef4e28;
+}
+
+.deals{
+    font-weight: 500;
+}
+
+.myorders__header__right{
+    display: flex;
+    align-items:center;
+}
+.myorders__header__right > input{
+    border:none;
+    outline:none;
+    padding:5px;
+    
+}
+
+
+.ordertotal{
+    font-weight:bold;
+    font-size:17px;
+    text-align: center;
+}
+.myorders__previousorders__header__right span{
+    font-size:25px;
+    margin-left: 8px;
+    text-align: center;
+}
+
+.myorders__previousorders{
+    display: flex;
+    background-color: rgb(247, 241, 218); 
+    flex-direction: column;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.myorders__previousorders__header{
+    display: flex;
+    justify-content:space-between;
+    padding: 18px;
+    border-radius: 15px;
+    border-bottom: 1px solid rgb(214, 206, 206);
+}
+
+.myorders__previousorders__header__left{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    margin-left:20px;
+}
+
+.orderno{
+    font-size:17px;
+    font-weight:bold;
+}
+
+.ordertime{
+    font-size:13px;
+    color:grey;
+}
+.myorders__previousorders__header__right{
+    display: flex;
+    align-items:center;
+}
+
+.myorders__previousorders__main{
+    display: flex;
+    justify-content:space-between;
+    max-height: 230px;
+    min-width: 100%;
+    margin-top:20px;
+    padding:20px;
+    background-color: rgb(247, 241, 218); 
+    border-bottom: 1px solid rgb(214, 206, 206);
+}
+
+.myorders__previousorders__main__left{
+    display: flex;
+    margin-left:10px;
+    
+}
+
+.myorders__previousorders__img > img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    border-radius: 22px;
+    margin-right: 14px;
+}
+
+
+.myorders__previousorders__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+}
+
+.myorders__previousorders__main__right{
+    display: flex;
+    align-items: center;
+}
+
+.delivered{
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.title{
+    font-size:19px;
+    margin-bottom:25px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.myorders__previousorders__main__right > button{
+    outline: none;
+    border : none;
+    padding:10px;
+    border: 1px solid #ef4e28;
+    color : #ef4e28;
+    border-radius: 4px;
+    background-color:white;
+}

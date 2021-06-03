@@ -39,7 +39,7 @@ function Cart() {
 
 
         <div className="cart__right">
-            <PaymentSummary/>
+            <PaymentSummary />
         </div>        
        </div>
        )}

@@ -3,13 +3,16 @@ import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 import PaymentIcon from '@material-ui/icons/Payment';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import {Link} from 'react-router-dom';
-import {getTotal} from '../contextApi/Reducer.js'
+import {getBasketTotal} from '../contextApi/Reducer.js'
 import '../Styles/PaymentSummary.css'
 import {useStateValue} from '../contextApi/StateProvider'
 
 function PaymentSummary() {
 
-   const [{basket}] = useStateValue();
+   const [{basket}, dispatch] = useStateValue();
+         
+  
+   console.log(basket.length);
     return (
         <div className="dispatchDetails">
             <div className="dispatchDetails__deliveryAdd ">
@@ -34,7 +37,7 @@ function PaymentSummary() {
                 <div className="payment__total">
                     <div className="payment__bagTotal payment__flex">
                         <p>Bag Total</p>
-                        <p>₹ {getTotal(basket)}</p>
+                        <p>₹ {getBasketTotal(basket)}</p>
                     </div>
                     <div className="payment__shippingCharges payment__flex">
                         <p>Shipping charges</p>
@@ -42,7 +45,7 @@ function PaymentSummary() {
                     </div>
                     <div className="payment__amountPayable payment__flex">
                         <p>Amount Payable</p>
-                        <p>₹ {getTotal(basket)}</p>
+                        <p>₹ {getBasketTotal(basket) + parseInt(19)}</p>
                     </div>
                        
                     <div className="payment__gstin">
@@ -53,7 +56,7 @@ function PaymentSummary() {
                     </div>
                     
                     <div className="payment__proceed">
-                       <button>Proceed to pay ₹ {getTotal(basket)} </button>
+                       <button>Proceed to pay ₹ {getBasketTotal(basket) + parseInt(19)} </button>
                     </div>
                    <Link to= "/">
                     <div className="payment__continueShopping">

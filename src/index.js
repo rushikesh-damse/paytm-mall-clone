@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {initialState, reducer} from './contextApi/Reducer'
+import reducer , {initialState} from './contextApi/Reducer'
 import { StateProvider } from "./contextApi/StateProvider";
 
 ReactDOM.render(
