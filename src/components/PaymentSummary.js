@@ -1,18 +1,26 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 import PaymentIcon from '@material-ui/icons/Payment';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import {Link} from 'react-router-dom';
-import {getBasketTotal} from '../contextApi/Reducer.js'
+// import {getBasketTotal} from '../contextApi/Reducer.js'
 import '../Styles/PaymentSummary.css'
 import {useStateValue} from '../contextApi/StateProvider'
 
 function PaymentSummary() {
 
-   const [{basket}, dispatch] = useStateValue();
-         
+   const [{basket , totalAmount}, dispatch] = useStateValue();
+
+   useEffect(() => {
+    dispatch({ 
+     type: "Get_Total_Amount"
+     });
   
-   console.log(basket.length);
+  }, [basket]);
+
+
+
+
     return (
         <div className="dispatchDetails">
             <div className="dispatchDetails__deliveryAdd ">
@@ -37,7 +45,8 @@ function PaymentSummary() {
                 <div className="payment__total">
                     <div className="payment__bagTotal payment__flex">
                         <p>Bag Total</p>
-                        <p>₹ {getBasketTotal(basket)}</p>
+                        {/* <p>₹ {getBasketTotal(basket)}</p> */}
+                        <p>₹ {totalAmount} </p>
                     </div>
                     <div className="payment__shippingCharges payment__flex">
                         <p>Shipping charges</p>
@@ -45,7 +54,7 @@ function PaymentSummary() {
                     </div>
                     <div className="payment__amountPayable payment__flex">
                         <p>Amount Payable</p>
-                        <p>₹ {getBasketTotal(basket) + parseInt(19)}</p>
+                        <p>₹ {totalAmount + parseInt(19)}</p>
                     </div>
                        
                     <div className="payment__gstin">
@@ -56,9 +65,9 @@ function PaymentSummary() {
                     </div>
                     
                     <div className="payment__proceed">
-                       <button>Proceed to pay ₹ {getBasketTotal(basket) + parseInt(19)} </button>
+                       <button>Proceed to pay ₹ {totalAmount + parseInt(19)} </button>
                     </div>
-                   <Link to= "/">
+                   <Link  style={{textDecoration : "none"}} to= "/">
                     <div className="payment__continueShopping">
                       <p>Continue Shopping</p>
                       <ChevronRightIcon className="rightarrowicon"/>

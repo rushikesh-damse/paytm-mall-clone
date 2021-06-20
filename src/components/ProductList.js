@@ -79,8 +79,11 @@ const style ={
                   id = "1"
                   title = "Apple iPhone 11 128 GB White(Without Earphone & Adapter"
                   image = {ApplePhone}
-                  price = { "₹59000"}
+                  price = {"₹59000"}
                   rating = "3.8"
+                  quantity = {1}
+                  updatedPrice = {"₹59000"}
+                  
                   />
                </div>
 
@@ -91,6 +94,8 @@ const style ={
                   image = {Trimmer}
                   price = { "₹899"}
                   rating = "4.1"
+                  quantity = {1}
+                  updatedPrice = {"₹899"}
                   />
                </div>
 
@@ -101,6 +106,8 @@ const style ={
                   image = {Shoes}
                   price = { "₹1719"}
                   rating = "3.6"
+                  quantity = {1}
+                  updatedPrice = {"₹1719"}
                   />
                </div>
 
@@ -111,6 +118,8 @@ const style ={
                   image = {Saree}
                   price = { "₹1079"}
                   rating = "2"
+                  quantity = {1}
+                  updatedPrice = {"₹1097"}
                   />
                </div>
 
@@ -121,6 +130,8 @@ const style ={
                   image = {HeadPhone}
                   price = { "₹379"}
                   rating = "4.1"
+                  quantity = {1}
+                  updatedPrice = {"₹379"}
                   />
                </div>
 
@@ -131,6 +142,8 @@ const style ={
                   image = {Tshirt}
                   price = { "₹499"}
                   rating = "4"
+                  quantity = {1}
+                  updatedPrice = {"₹499"}
                   />
                </div>
 

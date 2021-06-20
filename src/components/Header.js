@@ -29,17 +29,19 @@ const Header = () => {
         </div>
 
         <div className="header__right">
+          <Link style={{textDecoration : "none"}} to ="/myorders">
           <div className="header__myorders common">
             <ListAlt className="icon" />
             <span>My Orders</span>
           </div>
+          </Link>
           <Link style={{textDecoration : "none"}} to="/cart">
           <div className="header__bag common">
           <ShoppingBasket  className="whitebackground icon"/>
              {basket.length === 0 ? <p>No Items in the bag</p> :<span className ="cart__counter">{basket.length}</span>}
            </div>
            </Link>
-           <Link to="/">
+           <Link  style={{textDecoration : "none"}} to="/">
           <div className="header__login common">
             <Mood className="color icon" />
             <span>Login/Signup</span>

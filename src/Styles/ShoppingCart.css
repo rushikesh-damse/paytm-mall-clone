@@ -6,13 +6,11 @@
     max-height: 230px;
     min-width: inherit;
     border-bottom: 1px solid rgb(214, 206, 206);
-    
-
 }
 
 .shoppingcart__items__left{
     display: flex;
-    width: 60%;
+    width: 50%;
 }
 
 .shoppingcart__product__img{
@@ -37,6 +35,32 @@
 .shoppingcart__addoffers > p{
     margin-left: 5px;
 }
+
+.shoppingcart__items__middle{
+  width:10%;
+  /* background-color: lightgreen; */
+  text-align: center;
+  padding: 10px;
+  border : 1px solid grey;
+  height: 30px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.increment-btn,
+.decrement-btn{
+    border:none;
+    outline: none;
+    font-size: 16px !important;
+    text-align: center;
+}
+
+.shoppingcart__items__quantity{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
 .shoppingcart__items__right{
     display: flex;
     justify-content: space-between;

@@ -1,17 +1,18 @@
 import React from 'react'
+import {useEffect} from 'react'
 import DeleteIcon from '@material-ui/icons/Delete';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 import '../Styles/ShoppingCart.css'
 
 import {useStateValue} from '../contextApi/StateProvider'
 
-function ShoppingCart({title,id,price,image,rating}) {
+function ShoppingCart({title,id,price,image,rating,quantity,updatedPrice}) {
      
      const [{basket} , dispatch] = useStateValue();     
-
-
+    
       const deleteItem =  () => {
           dispatch({
             type : "Remove_From_Basket",
@@ -19,6 +20,23 @@ function ShoppingCart({title,id,price,image,rating}) {
         }) ;
       };
 
+
+      const increment =  () => {
+        dispatch({
+          type : "Increment",
+          id : id,
+          quantity : quantity,
+        });
+      };
+
+      const decrement =  () => {
+        dispatch({
+          type : "Decrement",
+          id : id,
+          quantity : quantity,
+        });
+      };
+     
     return (
       
         <div className="shoppingcart__items">
@@ -36,6 +54,12 @@ function ShoppingCart({title,id,price,image,rating}) {
                 </div>
             </div>
 
+              <div className="shoppingcart__items__middle">
+                <RemoveIcon className="decrement-btn" onClick={decrement} />
+                <span className="shoppingcart__items__quantity">{quantity}</span>
+                <AddIcon  className="increment-btn" onClick={increment} />
+              </div>
+            
             <div className="shoppingcart__items__right">
                 <div className="shoppingcart__price">
                 <h2>{price}</h2>

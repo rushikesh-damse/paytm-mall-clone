@@ -2,7 +2,7 @@ import React from 'react'
 import '../Styles/FlashProduct.css'
 import { useStateValue } from "../contextApi/StateProvider";
 
-function FlashProduct({id , title ,price, image , rating}) {
+function FlashProduct({id , title ,price, image , rating, quantity, updatedPrice}) {
 
   const [{} , dispatch] = useStateValue();
   const additems = () =>{
@@ -14,6 +14,9 @@ function FlashProduct({id , title ,price, image , rating}) {
           price :price,
           image :image,
           rating:rating,
+          quantity :quantity,
+          updatedPrice :updatedPrice,
+      
         },
        });
 
