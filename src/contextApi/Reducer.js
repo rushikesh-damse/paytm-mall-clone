@@ -33,10 +33,17 @@ export const initialState = {
            }
            return item;
          })
-          
-         return {
+        
+         const updatedIncrementQuantityPrice = incrementQuantity.map(item => {
+            if(action.id === item.id){
+            return{...item , updatedPrice : priceToNumber(item.price)* item.quantity } 
+           }
+           return item;
+         })
+
+        return {
             ...state,
-           basket : incrementQuantity,
+           basket : updatedIncrementQuantityPrice,
          };
 
          case "Decrement" :
@@ -46,10 +53,18 @@ export const initialState = {
             }
             return item;
           }).filter(item => item.quantity!==0);
- 
-          return {
+           
+          const updatedDecrementQuantityPrice = decrementQuantity.map(item => {
+            if(action.id === item.id){
+            return{...item , updatedPrice : priceToNumber(item.price)* item.quantity } 
+           }
+           return item;
+         })
+         
+         
+         return {
              ...state,
-            basket : decrementQuantity,
+            basket : updatedDecrementQuantityPrice,
           };
           
           case "Get_Total_Amount" :

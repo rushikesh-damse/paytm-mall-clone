@@ -62,7 +62,7 @@ function ShoppingCart({title,id,price,image,rating,quantity,updatedPrice}) {
             
             <div className="shoppingcart__items__right">
                 <div className="shoppingcart__price">
-                <h2>{price}</h2>
+                <h2>₹ {updatedPrice}</h2>
                 </div>
                
                 <div className="shoppingcart__items__remove">
