@@ -90,7 +90,9 @@
 .header__right .icon{
     margin-right:5px;
 }
-.header__bag{
+.header__bag,
+.header__myorders
+{
     position: relative;
 }
 
@@ -104,7 +106,7 @@
   height:20px;
   text-align: center;
   top:-10px;
-  left:9px;
+  left:12px;
   background-color : #ef4e28;
   color : white;
   border-radius : 50%;

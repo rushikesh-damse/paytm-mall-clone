@@ -1,18 +1,17 @@
 import React from "react";
 import logo from "../images/logo/logo.jpg";
-import { Search,Menu, ListAlt, ShoppingBasket, Mood } from "@material-ui/icons";
+import { Search,Menu, ListAlt, ShoppingBasket, Mood , Favorite , FavoriteBorder } from "@material-ui/icons";
 import {Link} from 'react-router-dom';
 import  '../Styles/Header.css'
 import { useStateValue } from "../contextApi/StateProvider";
 
 
 const Header = () => {
-    const [{basket} , dispatch] = useStateValue();
+    const [{basket , saveForLaterBasket}, dispatch] = useStateValue();
+   
   return (
     <div className="header">
-      
        <img className="logo" src={logo}alt={logo}/>
-      
        <div className="parentnav">
        <nav className = "navbar">
         <div className="header__options">
@@ -38,7 +37,21 @@ const Header = () => {
           <Link style={{textDecoration : "none"}} to="/cart">
           <div className="header__bag common">
           <ShoppingBasket  className="whitebackground icon"/>
-             {basket.length === 0 ? <p>No Items in the bag</p> :<span className ="cart__counter">{basket.length}</span>}
+          
+          {/* {basket ? <span className ="cart__counter">{basket.length} </span> : <p>No Items in the bag</p>} */}
+          {basket.length === 0 ? <p>No Items in the bag</p> :<span className ="cart__counter">{basket.length}</span>}
+           </div>
+           </Link>
+          
+
+          <Link  style={{textDecoration : "none"}} to="/saveforlater">
+          <div className="header__myorders common">
+           {saveForLaterBasket.length === 0 ? <FavoriteBorder/> : 
+           <div>
+             <Favorite/>
+             <span className ="cart__counter">{saveForLaterBasket.length}</span>
+           </div>
+           }
            </div>
            </Link>
            <Link  style={{textDecoration : "none"}} to="/">

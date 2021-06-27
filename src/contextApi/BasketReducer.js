@@ -1,13 +1,15 @@
-export const initialState = {
+export const initialBasketState = {
     basket: [],
-    totalItem : 0,
+    saveForLaterBasket : [],
+    totalItemInBasket : 0,
+    totalItemInSaveForLaterBasket : 0,
     totalAmount : 0,
   };
   
   const priceToNumber = (price) => (parseInt(price.replace('₹' , '')));
   
- const reducer = (state, action) => {
-    console.log(state.basket);
+ const basketReducer = (state, action) => {
+    //console.log(state.basket);
     switch (action.type) {
       case "Add_To_Basket":
         return {
@@ -77,7 +79,7 @@ export const initialState = {
                totalAmount : getBasketTotal(newBasket1),
             };
 
-            case "Get_Item_Total" :
+            case "Get_Item_Total_Of_Basket" :
               const newBasket2 = [...state.basket];
               const getBasketItem = (newBasket2) =>  newBasket2.reduce((amount, item) =>
                 ((item.quantity) + amount), 0);
@@ -85,13 +87,54 @@ export const initialState = {
                 // console.log(getBasketItem);
              return {
                  ...state,
-                 totalItem : getBasketItem(newBasket2),
-              };
+                 totalItemInBasket : getBasketItem(newBasket2),
+             };
 
-        default :
-        return {...state}
-     }
+             case "Dispatch_To_SaveforLater" :
+            
+              const updateSaveForLater = [...state.saveForLaterBasket ,  action.items]
+  
+              const deleteItemFromBasket = state.basket.filter(item => { return action.items.id !== item.id} )
+               return {
+                 ...state,
+                 basket : deleteItemFromBasket,
+                 saveForLaterBasket : updateSaveForLater,
+          };
+
+          case "Get_Item_Total_Of_Saveforlaterbasket" :
+            const newBasket3 = [...state.saveForLaterBasket]
+           const saveforlaterbaskettotal = (newBasket3) => (newBasket3).reduce( (amount , item) => ((item.quantity) + amount) , 0);
+
+               return {
+                 ...state,
+                 totalItemInSaveForLaterBasket : saveforlaterbaskettotal(newBasket3),
+
+           };
+
+           case "Delete_Item_From_Saveforlater" :
+            const updatedSaveforlaterAfterDeletion = state.saveForLaterBasket.filter(item => (
+              action.id !== item.id
+            ))
+             return {
+                 ...state,
+                saveForLaterBasket :updatedSaveforlaterAfterDeletion,
+           };
+
+           case "Move_TO_Basket" :
+                const updatedBasket = [...state.basket , action.items];
+                const updatedSaveForLater = state.saveForLaterBasket.filter(item => { return item.id !== action.items.id});
+           return {
+                 ...state,
+                 basket : updatedBasket,
+                 saveForLaterBasket : updatedSaveForLater,
+           };
+           
+         default : 
+          return {...state};
+      }
+
+
 };
 
-export default reducer
+export default basketReducer
   

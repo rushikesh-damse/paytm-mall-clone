@@ -75,8 +75,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #ef4e28;
     cursor: pointer;
+}
+
+.shoppingcart__items__remove,
+.removeFromBasket{
+    color: #ef4e28;
 }
 
 .deleteicon,
@@ -90,5 +94,5 @@
     height: 18px !important;
     margin-left: 5px;
     margin-right: 5px;
-  
+     color: #ef4e28;
 }

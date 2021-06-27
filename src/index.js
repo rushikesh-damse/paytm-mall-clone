@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import reducer , {initialState} from './contextApi/Reducer'
+import basketReducer , {initialBasketState} from './contextApi/BasketReducer'
 import { StateProvider } from "./contextApi/StateProvider";
 
 ReactDOM.render(
   
   <React.StrictMode>
-   <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
+   <StateProvider initialState={initialBasketState} 
+   reducer={basketReducer}>
+      <App /> 
     </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')

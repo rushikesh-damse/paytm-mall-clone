@@ -1,0 +1,36 @@
+.saveforlateritems{
+    margin : 20px 20px;
+    padding :20px 20px;
+    display:flex;
+    justify-content: space-between;
+    max-height: 230px;
+    min-width: inherit;
+    border-bottom: 1px solid rgb(214, 206, 206);
+
+}
+
+.saveforlateritemsleft{
+    display: flex;
+    width:50%;
+}
+
+.saveforlateritem_product_img{
+    width:100px;
+    object-fit:contain;
+    margin-right: 15px;
+}
+
+.saveforlateritemsright{
+    display: flex;
+    flex-direction: column;
+   justify-content:space-between;
+   align-items: flex-end;
+}
+
+.saveforlateritem_remove{
+    display: flex;
+}
+
+.saveforlater{
+    color: #ef4e28;
+}

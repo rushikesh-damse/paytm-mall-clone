@@ -9,12 +9,12 @@ import '../Styles/Cart.css'
 
 function Cart() {
 
- const [{basket, totalItem} , dispatch] = useStateValue();
+ const [{basket, totalItemInBasket} , dispatch] = useStateValue();
 
  useEffect(() => {
 
  dispatch({ 
-  type: "Get_Item_Total"
+  type: "Get_Item_Total_Of_Basket"
   });
 
 }, [basket]);
@@ -31,7 +31,7 @@ function Cart() {
              <div>
            <div className="shoppingcart__header">
             <ShoppingCartIcon className="shoppingCartIcon"/>
-          <h2><span>{totalItem} Items</span> in your bag</h2>
+          <h2><span>{totalItemInBasket} Items</span> in your bag</h2>
            </div>
                {basket.map(items =>(
                     <ShoppingCart
