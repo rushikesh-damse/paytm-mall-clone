@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../images/logo/logo.jpg";
 import { Search,Menu, ListAlt, ShoppingBasket, Mood , Favorite , FavoriteBorder } from "@material-ui/icons";
 import {Link} from 'react-router-dom';
 import  '../Styles/Header.css'
@@ -11,7 +10,7 @@ const Header = () => {
    
   return (
     <div className="header">
-       <img className="logo" src={logo}alt={logo}/>
+       <img className="logo" src ='assets/images/logo/logo.jpg' />
        <div className="parentnav">
        <nav className = "navbar">
         <div className="header__options">

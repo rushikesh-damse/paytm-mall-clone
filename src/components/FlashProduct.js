@@ -16,16 +16,17 @@ function FlashProduct({id , title ,price, image , rating, quantity, updatedPrice
           rating:rating,
           quantity :quantity,
           updatedPrice :updatedPrice,
-      
-        },
+      },
        });
 
   };
  return (
-        <div className="flashproduct">
-            <img src={image}/>
-            <p className="flashproduct__price">{price}</p>   
-            <p  className="flashproduct__title">{title}</p>
+        <div className="flashproduct__item">
+          <div className="flashproduct__item__img__div">
+            <img className = "flashproduct__item__img" src={image}/>
+          </div>
+            <p className="flashproduct__item__price">{price}</p>   
+            <p  className="flashproduct__item__title">{title}</p>
             <button onClick={additems} >Buy Now</button>
           </div>
     )

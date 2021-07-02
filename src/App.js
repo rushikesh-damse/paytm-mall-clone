@@ -4,6 +4,7 @@ import Cart from './components/Cart'
 import MyOrders from './components/MyOrders'
 import ProductList from './components/ProductList'
 import SaveForLaterCart from './components/SaveForLaterCart'
+import Category from './components/Products/Category'
 import './Styles/GlobalStyle.css'
 import {
   BrowserRouter as Router,Switch, Route} from "react-router-dom";
@@ -14,6 +15,10 @@ const App = () => {
     <div className="App">
         <Router>
         <Switch>
+        <Route path={"/product/:id"}>
+         <Header />
+         <Category/>
+       </Route>
         <Route path="/saveforlater">
          <Header />
          <SaveForLaterCart/>

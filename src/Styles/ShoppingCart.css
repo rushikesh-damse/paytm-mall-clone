@@ -15,6 +15,7 @@
 
 .shoppingcart__product__img{
     width:100px;
+    height:100px;
     object-fit:contain;
     margin-right: 15px;
 }

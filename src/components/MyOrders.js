@@ -1,8 +1,5 @@
 import React from 'react'
 import { Search } from "@material-ui/icons";
-import Headphone from '../images/Flash Products/Headphone.webp'
-import Tshirt from '../images/Flash Products/T-shirt.webp'
-import Shoes from '../images/Flash Products/Sports Shoes.webp'
 
 
 import '../Styles/MyOrders.css'
@@ -39,7 +36,7 @@ function MyOrders() {
               <div className="myorders__previousorders__main">
                    <div className="myorders__previousorders__main__left">
                        <div className="myorders__previousorders__img">
-                           <img src={Headphone}/>
+                           <img src='assets/images/Flash Products/Headphone.webp'/>
                        </div>
                        <div className="myorders__previousorders__content">
                            <p className="delivered"> Delivered</p>
@@ -56,7 +53,7 @@ function MyOrders() {
               <div className="myorders__previousorders__main">
                    <div className="myorders__previousorders__main__left">
                        <div className="myorders__previousorders__img">
-                           <img src={Tshirt}/>
+                           <img src='assets/images/Flash Products/T-shirt.webp'/>
                        </div>
                        <div className="myorders__previousorders__content">
                            <p className="delivered"> Delivered</p>
@@ -87,7 +84,7 @@ function MyOrders() {
               <div className="myorders__previousorders__main">
                    <div className="myorders__previousorders__main__left">
                        <div className="myorders__previousorders__img">
-                           <img src= {Shoes}/>
+                           <img src= 'assets/images/Flash Products/Sports Shoes.webp'/>
                        </div>
                        <div className="myorders__previousorders__content">
                            <p className="delivered"> Delivered</p>

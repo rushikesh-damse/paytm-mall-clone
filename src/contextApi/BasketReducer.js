@@ -9,7 +9,7 @@ export const initialBasketState = {
   const priceToNumber = (price) => (parseInt(price.replace('₹' , '')));
   
  const basketReducer = (state, action) => {
-    //console.log(state.basket);
+   
     switch (action.type) {
       case "Add_To_Basket":
         return {

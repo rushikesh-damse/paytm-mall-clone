@@ -1,0 +1,7 @@
+.category{
+    width: 95%;
+    /* background-color : pink; */
+    margin : 20px auto;
+    min-height: 30vh;
+     background-color: rgb(247, 241, 218);
+}
