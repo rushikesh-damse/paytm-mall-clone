@@ -34,13 +34,13 @@ const CategoryProducts = ({product , id}) => {
             <div className="categoryproduct__items__img">
                   <img src={item.image}/>
             </div>
+             <div className="categoryproduct__items__price">
+                 <span>{item.price}</span>
+            </div>
             <div className="categoryproduct__items__title">
                  <p>{item.title}</p>
             </div>
-            <div className="categoryproduct__items__price">
-                 <span>{item.price}</span>
-            </div>
-              <button  onClick = {(e) => addToBasket(e,item.id) } >Buy Now</button>
+            <button  onClick = {(e) => addToBasket(e,item.id) } >Buy Now</button>
 
           </div>
         

@@ -56,9 +56,10 @@
 }
 
 .categoryproduct__items__price{
-   font-size: 20px;
+   font-size : x-large;
+   color: #DE3B12;
    font-weight:bold;
-   margin : 5px;
+   margin : 12px auto;
 }
 
 .categoryproduct > button{

@@ -128,7 +128,7 @@ import { v4 as uuidv4 } from 'uuid';
         rating : "3.9",
         quantity : 1,
         updatedPrice : 729,
-        category : "Face Mask",
+        category : "Electronics",
       },
 
       //facemask

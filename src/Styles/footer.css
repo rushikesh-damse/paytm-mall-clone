@@ -1,0 +1,41 @@
+.footer_section{
+width:95%;
+margin:20px auto;
+/* background-color: salmon; */
+text-align:center;
+}
+
+.footer_section__main{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.footer_section__content{
+    padding:10px;
+    font-size: 18px;
+}
+
+.footer__paytm__link{
+    text-decoration: none;
+    font-style:italic;
+    color: #ef4e28;
+}
+
+.footer__section__links{
+    text-decoration: none;
+    padding: 10px;
+    text-align:center;
+}
+
+.link{
+    margin:0px 10px;
+    color: #eb7a61;
+}
+
+
+.link :hover{
+    color: #ef4e28;
+}
